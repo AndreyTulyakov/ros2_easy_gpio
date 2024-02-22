@@ -122,3 +122,5 @@ ros2 run easy_gpio gpio_node
     ```bash
     ros2 service call /gpio/write_pwm easy_gpio_interfaces/WritePWM "{pin: 12, frequency: 1000, duty: 25}"
     ```
+
+Response with empty `error` string indicates success.

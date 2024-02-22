@@ -1,0 +1,8 @@
+uint32 pin
+# Logical true - value represent HIGH signal level, and logical false - represent LOW signal level.
+bool value
+# Optional output pin modes, separated by pipe symbol.
+string mode 
+---
+# On failure returns false
+string error

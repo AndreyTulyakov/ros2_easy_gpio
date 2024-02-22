@@ -1,0 +1,7 @@
+uint32 pin
+# Setup pin pull to UP, DOWN or leave empty for floating mode.
+string pull
+---
+# Logical true - value represent HIGH signal level, and logical false - represent LOW signal level.
+bool value
+string error

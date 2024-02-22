@@ -46,7 +46,7 @@ IN --+            +----- out
 [Original explanation](https://www.kernel.org/doc/html/v5.2/driver-api/gpio/driver.html#gpio-lines-with-open-drain-source-support)
 
 
-## Dependencies
+## Installation & Dependencies
 
 Install `python3-lgpio` manually, because `rosdep` don't know about this package for now:
 ```
@@ -58,6 +58,21 @@ or install latest version manually from:
 ```
 https://github.com/joan2937/lg/tree/master
 ```
+
+Install packets:
+
+```bash
+# Suppose that your ROS2 home path is ~/ros2_ws/
+cd ~/ros2_ws/src
+git clone https://github.com/AndreyTulyakov/ros2_easy_gpio.git
+cd ~/ros2_ws
+
+colcon build --symlink-install --packages-select easy_gpio_interfaces
+colcon build --symlink-install --packages-select easy_gpio
+source install/local_setup.bash 
+```
+
+
 
 
 ## Usage examples

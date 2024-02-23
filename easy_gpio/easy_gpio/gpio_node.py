@@ -113,6 +113,12 @@ class GPIOServiceNode(Node):
         self.destroy_service(self.srv_write_bit)
         self.destroy_service(self.srv_write_pwm)
 
+        # Frees used pind
+        used_pins = [*self.input_pins.keys()] + [*self.output_pins.keys()]
+        self.get_logger().info(f'Frees used GPIO: {used_pins}')
+        for pin in used_pins:
+            lgpio.gpio_free(self.chip_handler, pin)
+
         self.get_logger().info(f'Closing GPIO device {self.chip_handler}...')
         lgpio.gpiochip_close(self.chip_handler)
 
